@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InverStart - Registro de Usuario</title>
+  <link rel="stylesheet" href="./css/registro.css"/>
+  <script type="module" src="./js/registro.js" defer></script>
+  <script type="module" src="./js/firebaseConfig.js" defer></script>
+
+</head>
+<body>
+  <div class="register-container">
+    <div class="logo-container">
+      <h1>Registro</h1>
+      <br>
+      <img src="./img/logo.jpeg" alt="Logo de la app" class="logo">
+      <p>Tú idea, nuestra inversión</p>
+    </div>
+    <form id="registroForm">
+    
+    <input type="text" id="nombre" placeholder="Nombre completo" required autocomplete="name">
+    <input type="email" id="correo" placeholder="Correo electrónico" required autocomplete="email">
+    <input type="password" id="contrasena" placeholder="Contraseña" required autocomplete="new-password">
+    <input type="text" id="documentoIdentidad" placeholder="Documento de idetidad" required autocomplete="off">
+    <input type="tel" id="telefono" placeholder="Teléfono" required autocomplete="tel">
+    <input type="date" id="fechaNacimiento" placeholder="Fecha de nacimiento" required autocomplete="bday">
+
+    <p align="center">¿Qué eres?</p>
+      <label>
+      <input type="radio" name="tipoUsuario" value="Inversor" required> Inversionista
+      </label>
+      <br>
+      <label>
+      <input type="radio" name="tipoUsuario" value="Emprendedor" required> Emprendedor
+      </label>
+      <br>
+      <button type="submit">Registrarse</button>
+    </form>
+
+    <a href="login.html" class="login-link">¿Ya tienes cuenta? Inicia sesión</a>
+  </div>
+</body>
+</html>
+

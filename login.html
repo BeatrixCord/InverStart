@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="./js/firebaseConfig.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("login-form");
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // Evita recarga
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        try {
+          const userCredential = await signInWithEmailAndPassword(auth, email, password);
+          console.log("Usuario logueado:", userCredential.user);
+          // Redirige si desea:
+          window.location.href = "intereses.html"; // Cambie esto según su estructura
+        } catch (error) {
+          console.error("Error al iniciar sesión:", error.message);
+          alert("Error: " + error.message);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo-container">
+      <img src="./img/logo.jpeg" alt="Logo" class="logo">
+      <h1>InverStart</h1>
+      <p>Tú idea, nuestra inversión</p>
+    </div>
+
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <button type="submit">Login</button>
+      <br><br><br>
+      <a href="forgot-password.html" class="forgot-password-link">¿Olvidaste tu contraseña?</a>
+      <br><br><br>
+      <a href="registro.html" class="registro-link">¿No tienes cuenta? Regístrate</a>
+    </form>
+  </div>
+</body>
+</html>

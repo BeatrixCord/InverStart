@@ -1,0 +1,50 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InverStart</title>
+  <link rel="stylesheet" href="./css/home.css">
+  <script type="module" src="./js/homepage.js"></script>
+  <script type="module" src="./js/firebaseConfig.js"></script>
+</head>
+<body>
+  <body>
+    <div class="phone-container">
+  <header>
+    <h1>InverStart</h1>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="¿En que quieres invertir?">
+      <button class="filter-btn">⚙️</button>
+    </div>
+  </header>
+
+  <main id="product-list">
+    <div class="tabla" id="tabla">
+      <!-- Encabezado de la tabla -->
+      <div class="tarjeta" id="miTarjeta">
+        <div class="texto-tarjeta">
+          <h3 id="titulo">Cargando...</h3>
+          <p id="descripcion">Espere un momento</p>
+        </div>
+        <button onclick="accionTarjeta()">Ver más</button>
+      </div>
+      <!-- Aquí se agregarán las filas dinámicamente -->
+      <button class="ver-mas-btn">Ver más</button>
+    </div>
+  </main>
+
+  <div class="pagination">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <a href="#" class="see-more">See More ➔</a>
+  </div>
+  <nav class="bottom-nav">
+    <button>❤️</button>
+    <button class="home">🏠</button>
+    <button>🛒</button>
+  </nav>
+  <br><br><br>
+</div>
+</body>
+</html>

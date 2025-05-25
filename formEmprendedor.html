@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Proyecto</title>
+  <link rel="stylesheet" href="./css/form.css">
+  <script type="module" src="./js/form.js"></script>
+  <script type="module" src="./js/firebaseConfig.js"></script>
+
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Registra tu Proyecto o Emprendimiento</h2>
+
+    <form id="proyectoForm">
+      <label for="nombre">Nombre del Proyecto</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="descripcionCorta">Descripción Corta</label>
+      <input type="text" id="descripcionCorta" name="descripcionCorta" maxlength="120" required>
+
+      <label for="descripcionLarga">Descripción Detallada</label>
+      <textarea id="descripcionLarga" name="descripcionLarga" rows="5" required></textarea>
+
+      <label for="categoria">Categoría</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">Selecciona una categoría</option>
+        <option value="tecnologia">Tecnología</option>
+        <option value="moda">Moda</option>
+        <option value="arte">Arte</option>
+        <option value="educacion">Educación</option>
+        <option value="gastronomia">Gastronomía</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <label for="ubicacion">Ubicación</label>
+      <input type="text" id="ubicacion" name="ubicacion" required>
+
+      <label for="imagen">Imagen destacada (miniatura)</label>
+      <input type="file" id="imagen" name="imagen" accept="image/*">
+
+      <button type="submit">Publicar</button>
+    </form>
+  </div>
+  
+</body>
+</html>

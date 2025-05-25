@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)file:///C:/Users/Estudiantes/Desktop/InverStart/InverStart/registro.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario</title>
+  <script type="module" src="./js/firebaseConfig.js"></script>
+  
+  <style type="text/css">
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .register-container {
+    background: white;
+    width: 360px;
+    height: 850px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo-container {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  .logo {
+    width: 70px;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  h1{
+    font-size: 1.8em;
+    color: white;
+    background:#2e367a ;
+    width: 360px;
+    padding: 25px 0
+    }
+  
+  .logo-container p {
+    color: #2e367a;
+    font-weight: 500;
+    margin-top: 5px;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    padding: 12px;
+    background: #2e367a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #1d2355;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+    color: #2e367a;
+    text-decoration: none;
+    font-size: 0.95em;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  </style>
+  <script type="module" src="./js/registro.js" defer=""></script>
+  
+</head>
+<body>
+  <div class="register-container">
+    <div class="logo-container">
+      <h1>Registro</h1>
+      <br>
+      <img src="C:\Users\Estudiantes\Desktop\InverStart\InverStart\img\logo.jpeg" alt="Logo de la app" class="logo">
+      <p>Tú idea, nuestra inversión</p>
+    </div>
+    <form id="registroForm">
+    
+    <input type="text" id="nombre" placeholder="Nombre completo" required autocomplete="name">
+    <input type="email" id="correo" placeholder="Correo electrónico" required autocomplete="email">
+    <input type="password" id="contrasena" placeholder="Contraseña" required autocomplete="new-password">
+    <input type="text" id="dui" placeholder="Número de DUI" required autocomplete="off">
+    <input type="tel" id="telefono" placeholder="Teléfono" required autocomplete="tel">
+    <input type="date" id="fecha_nacimiento" placeholder="Fecha de nacimiento" required autocomplete="bday">
+
+    <p align="center">¿Qué eres?</p>
+      <label>
+      <input type="radio" name="tipo_usuario" value="Inversionista" required> Inversionista
+      </label>
+      <br>
+      <label>
+      <input type="radio" name="tipo_usuario" value="Emprendedor" required> Emprendedor
+      </label>
+      <br>
+
+
+      <button type="submit">Registrarse</button>
+    </form>
+    <a href="file:///C:/Users/Estudiantes/Desktop/InverStart/InverStart/login.html" class="login-link">¿Ya tienes cuenta? Inicia sesión</a>
+  </div>
+
+
+
+</body>
+</html>

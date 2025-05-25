@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Carga</title><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet">
+    <script type="module" src="./js/firebaseConfig.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: 'Cal Sans', sans-serif;
+        }
+
+        #loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ccc;
+            border-top-color: #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #content {
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="loadPage()">
+  <h1><div style="position: relative; width: 100%; height: 0; padding-top: 100.0000%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGjWEXfzEg/tTPzpPCA0LSaUIGpTGJ-Dg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+    <span style="color:41, 1 <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin text-align: center>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap" rel="stylesheet" text-align: center>
+<center>
+    <h3>
+        <span  style="color: #2471a3;" text-align: center>Invert</span><span style="color: #48c9b0;" text-align: center>Start</span>
+    </h3>
+        <p>¡Tu idea, nuestra inversión!</p>
+        <p>¡Bienvenido!</p>
+    </div>
+</center>
+
+    <script>
+        function loadPage() {
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
